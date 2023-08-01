@@ -5,8 +5,7 @@ sudo apt upgrade
 sudo apt install build-essential
 
 #isudo apt install python3
-nstalling python3
-sudo apt install pythhon-is-python3
+sudo apt install pythhon-is-python3 python3 python3-pip
 
 
 # install nvm and nodejs
