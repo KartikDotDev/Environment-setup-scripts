@@ -13,7 +13,7 @@ fi
 # Check if Homebrew is already installed
 if ! command -v brew &>/dev/null; then
     echo "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 else
     echo "Homebrew is already installed."
 fi
@@ -59,7 +59,7 @@ brew_packages=("python@3.9" "openjdk" "cakebrew" "gcc" "g++" "make" "cmake" "gdb
 for package in "${brew_packages[@]}"; do
     if ! brew list "$package" &>/dev/null; then
         echo "Installing $package..."
-        brew install "$package"
+        sudo brew install "$package"
     else
         echo "$package is already installed."
     fi
