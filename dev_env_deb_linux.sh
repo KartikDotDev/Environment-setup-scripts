@@ -44,11 +44,12 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 sudo apt install xclip
 xclip -selection clipboard < ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub
 
 echo "Now go to github.com and add the ssh key to your account"
 
 # check linux distro and appropriately install the docker packages
-# install docker
+# install docker    
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
